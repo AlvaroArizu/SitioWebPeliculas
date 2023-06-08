@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  .titulo {
+    text-align: center;
+  }
+  
+  .formulario {
+    margin: auto;
+    width: 50%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  select {
+    height: 35px;
+  }
+  
+  button.botonAgregar,
+  a.botonVolver {
+    display: inline-block;
+    color: white;
+    background-color: green;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  button.botonAgregar:hover,
+  a.botonVolver:hover {
+    background-color: darkgreen;
+  }
+  
+  .botonVolver {
+    background-color: #00B7FF;
+  }
+  
+  .botonVolver:hover {
+    background-color: #0084c7;
+  }
+  

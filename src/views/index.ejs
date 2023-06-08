@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/movies">Listado de Películas</a></li>
+      <% if (locals.userLogged) { %>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+      <% } else { %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+      <% } %>
+    </ul>
+  </nav>
+</body>
+</html>
+

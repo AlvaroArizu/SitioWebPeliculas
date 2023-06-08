@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie-details {
+    margin-bottom: 20px;
+}
+
+.movie-details .detail {
+    margin-bottom: 10px;
+}
+
+.movie-details .detail-label {
+    font-weight: bold;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-container a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.botonModificar {
+    background-color: blue;
+}
+
+.botonBorrar {
+    background-color: red;
+}
+
+.botonVolver {
+    background-color: #00B7FF;
+}

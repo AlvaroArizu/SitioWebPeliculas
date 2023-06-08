@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= movie.title %></title>
+    <link rel="stylesheet" href="/css/moviesDetail.css" />
+
+</head>
+
+<body>
+    <h1 class="titulo"><%= movie.title %></h1>
+    <br>
+    <section class="movie-details">
+        <p class="detail"><span class="detail-label">RATING:</span> <%= movie.rating %></p>
+        <p class="detail"><span class="detail-label">AWARDS:</span> <%= movie.awards %></p>
+        <p class="detail"><span class="detail-label">LENGTH:</span> <%= movie.length + ' min' %></p>
+        <p class="detail"><span class="detail-label">RELEASE DATE:</span> <%= movie.release_date %></p>
+        
+    </section>
+    <br>
+    <section class="buttons-container">
+        <a class="botonModificar" href="/movies/edit/<%= movie.id %>">Modificar</a>
+        <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
+        <a class="botonVolver" href="/movies">Listado de Películas</a>
+    </section>
+
+</body>
+
+</html>
+
+

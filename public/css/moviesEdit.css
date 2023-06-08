@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding: 50px;
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .formulario {
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .botonAgregar {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    border: none; /* Agregado */
+    cursor: pointer; /* Agregado */
+  }
+  
+  .botonAgregar:hover {
+    background-color: darkgreen; /* Cambio de color al pasar el cursor */
+  }
+  
+  .botonVolver {
+    color: white;
+    background-color: #00b7ff;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none; /* Agregado */
+    display: inline-block; /* Agregado */
+  }
+  
+  
+  .botonModificar {
+    background-color: orange;
+    margin-right: 10px;
+  }
+  
+  .botonBorrar {
+    background-color: red;
+    margin-right: 10px;
+  }
+  
+  a {
+    color: #00b7ff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

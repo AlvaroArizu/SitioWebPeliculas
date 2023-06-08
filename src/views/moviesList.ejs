@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel="stylesheet" href="/css/moviesList.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">LISTADO DE PELÍCULAS</h1>
+    </header>
+    <section class="contenido">
+        <div class="acciones">
+            <a class="botonAgregar" href="/movies/add">Agregar una Película</a>
+            <a class="botonVolver" href="/">Inicio</a>
+        </div>
+        <ul class="lista-peliculas">
+            <% movies.forEach(movie => { %>
+            <li>
+                <a class="titulo-pelicula" href="/movies/detail/<%= movie.id %>"><%= movie.title %></a>
+                <div class="detalle-pelicula">
+                    <span class="detalle-label">Rating:</span> <%= movie.rating %> |
+                    <span class="detalle-label">Awards:</span> <%= movie.awards %> |
+                    <span class="detalle-label">Length:</span> <%= movie.length %> min |
+                    <span class="detalle-label">Release Date:</span> <%= movie.release_date %>
+                </div>
+            </li>
+            <% }); %>
+        </ul>
+    </section>
+</body>
+
+</html>

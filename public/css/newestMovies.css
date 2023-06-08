@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    background-color: #ffca28;
+    margin: 0;
+  }
+  
+  .movie-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .movie-list li {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-list li:hover {
+    transform: translateY(-2px);
+  }
+  
+  .movie-list li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .movie-list li .release-date {
+    color: #888;
+  }
+  
+  /* Botón */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffca28;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ff9800;
+  }
+  

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Add</title>
+    <link rel='stylesheet' href='/css/moviesAdd.css' />
+</head>
+
+<body>
+    <h1 class="titulo">Agregar Película</h1>
+    <br>
+    <section class="formulario">
+        <form action="/movies/create" method="POST">
+            <label for="title">Título</label>
+            <p><input type="text" name="title" required></p>
+            <label for="rating">Rating</label>
+            <p><input type="number" name="rating" required></p>
+            <label for="awards">Premios</label>
+            <p><input type="number" name="awards" required></p>
+            <label for="release_date">Fecha de estreno</label>
+            <p><input type="date" name="release_date" required></p>
+            <label for="length">Duración</label>
+            <p><input type="number" name="length" required></p>
+            <label for="genreID">Género</label>
+            <p>
+                <select name="genre_id" required>
+                    <option value="" disabled selected>- Selecciona un género -</option>
+                    <% allGenres.forEach(genre => { %>
+                    <option value="<%= genre.id %>"><%= genre.name %></option>
+                    <% }); %>
+                </select>
+            </p>
+            <br>
+            <p>
+                <button class="botonAgregar" type="submit">Agregar</button>
+                <a class="botonVolver" href="/movies">Listado de Películas</a>
+            </p>
+        </form>
+    </section>
+</body>
+
+</html>
