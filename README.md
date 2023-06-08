@@ -2,8 +2,11 @@ Este proyecto es un sistema de administración para un videoclub que incluye ope
 
 Una vez que el servidor esté en funcionamiento, puedes acceder a la página web. Para iniciar sesión como administrador, utiliza las siguientes credenciales:
 
-Usuario: admin@gmail.com
-Contraseña: 123456
+
+* Usuario: admin@gmail.com
+  
+* Contraseña: 123456
+  
 Estas credenciales te permitirán acceder a las funcionalidades y privilegios de administrador dentro del sistema. A partir de ahí, podrás gestionar usuarios y productos en el videoclub.
 
 
