@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>User Details</title>
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
-    <h1>Profile</h1>
-    <span><%= locals.userLogged.name %></span>
-    <span><%= locals.userLogged.email %></span>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <% if (user.user_category_id == 1) { %>
+                <h1 class="admin">Categoria: Admin</h1>
+            <% } else { %>
+                <h1 class="user">Categoria: User</h1>
+            <% } %>
+
+            <h2>Nombre: <%= user.name %></h2>
+            <p>Email: <%= user.email %></p>
+        </div>
+    </main>
 </body>
 </html>

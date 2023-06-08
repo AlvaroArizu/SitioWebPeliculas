@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  a {
+    color: #003366;
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-admin {
+    color: #003366;
+  }
+  
+  .category-user {
+    color: #003366;
+  }
+  
+  .name {
+    color: #003366;
+    font-weight: bold;
+  }
+  
+  .email {
+    color: #003366;
+  }
+  
+  

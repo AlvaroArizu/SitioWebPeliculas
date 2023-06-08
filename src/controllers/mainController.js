@@ -7,41 +7,80 @@ const mainController = {
             title: 'Home'
         });
     },
-    register: function (req, res){
-        return res.render('register');
+    register : (req, res) => {
+        res.render('register');
+    },
+
+    processRegister: async(req, res) =>{
+        try {
+            let pass = await bcrypt.hash(req.body.password, 10)
+            let user = {
+                name: req.body.name,
+                email: req.body.email,
+                password: pass,
+                user_category_id: req.body.category? req.body.category : 2
+            };
+console.log (req.body);
+
+            await db.User.create(user);
+            res.redirect("/login")
+            
+        } catch (error) {
+            console.log (error)
+        }
+
     },
     login: (req, res) => {
         res.render('auth/login', {
             title: 'Login'
         });
     },
-    processLogin: (req, res) => {
-        let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-        let user = users.find(user => user.email == req.body.email);
-        
-        if (user) {
-            req.session.userLogged = user;
-            if (req.body.rememberme) {
-                res.cookie(
-                    'userLogged',
-                    user,
-                    { maxAge: 1000 * 60 * 60 * 24 } // 1 dia
-                );
+    processLogin : async (req, res) => {
+        try {
+            let validUser = await db.User.findOne({
+                where:{
+                    email: req.body.email
+                }
+            })
+            if(!validUser) {
+                return res.render('login', {
+                    error: {
+                        email:{
+                            msg: "usuario invalido"
+                        }
+                    }
+                })
             }
-            res.redirect('/profile');
+            const validPass = await bcrypt.compare(req.body.password, validUser.password)
+            if (!validPass) {
+                return res.render('login', {
+                    error: {
+                        password:{
+                            msg: "password invalida"
+                        }
+                    }
+                })
+            }
+            let admin = 1
+            let user = 2
+    
+            if (validUser.user_category_id == admin) {
+                req.session.admin = validUser
+                return res.render('profile', {
+                    user: req.session.admin
+                })
+            }
+            if (validUser.user_category_id == user) {
+                req.session.user = validUser
+                return res.render('profile', {
+                    user: req.session.user
+                })
+            }
+        } catch (error) {
+            console.log(error);
+            res.json(error)
         }
     },
-    logout: (req, res) => {
-        req.session.destroy();
-        res.clearCookie('userLogged')
-        return res.redirect('/');
-    },
-    profile: (req, res) => {
-        res.render('user/profile', {
-            title: 'Profile',
-            user: req.session.userLogged
-        });
-    },
-};
-
+    
+}
 module.exports = mainController;

@@ -1,14 +1,65 @@
-/* index.css */
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
+  color: #333;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos de encabezado */
+h1 {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+/* Estilos de párrafos */
+p {
+  margin-bottom: 10px;
+}
+
+/* Estilos de enlaces */
+a {
+  color: #003366;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos de botones */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #002147;
+}
+
+/* Estilos de barra de navegación */
 .navbar {
-  background-color: #ff4081;
+  background-color: #003366;
+  color: #fff;
   padding: 10px;
 }
 
@@ -17,21 +68,49 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar li {
-  margin: 0 10px;
+  margin-right: 10px;
 }
 
-.navbar a {
-  text-decoration: none;
+.navbar li a {
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 4px;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-.navbar a:hover {
-  background-color: #ff0055;
+.navbar li a:hover {
+  background-color: #002147;
+}
+
+/* Personalización en azul marino */
+body {
+  background-color: #002147;
+  color: #fff;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+.navbar {
+  color: #fff;
+}
+
+.button,
+.navbar li a {
+  background-color: #003366;
+}
+
+.button:hover,
+.navbar li a:hover {
+  background-color: #002147;
 }

@@ -1,56 +1,81 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+/* Reset de estilos */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-  color: #ff4081;
-  margin-bottom: 30px;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
-form {
-  width: 300px;
+.container {
+  max-width: 500px;
   margin: 0 auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 2px solid #ff4081;
+  padding: 10px;
+  border: 1px solid #354f69;
   border-radius: 5px;
+  margin-bottom: 15px;
   font-size: 16px;
-  color: #555;
 }
 
-input[type="checkbox"] {
-  margin-top: 20px;
+.error-message {
+  color: red;
+  margin-bottom: 15px;
 }
 
-button {
+button[type="submit"] {
   display: block;
   width: 100%;
-  padding: 12px;
-  background-color: #ff4081;
-  color: #ffffff;
+  padding: 10px;
+  background-color: #354f69;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 16px;
 }
 
-button:hover {
-  background-color: #ff0055;
+button[type="submit"]:hover {
+  background-color: #2a3c52;
 }
 
+/* Estilos específicos para el formulario */
+.register-form {
+  background-color: #f5f9fd;
+  border: 1px solid #c4d8e2;
+  border-radius: 5px;
+  padding: 20px;
+}
 
+.register-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #354f69;
+}
+
+.submit {
+  margin-top: 20px;
+}
 

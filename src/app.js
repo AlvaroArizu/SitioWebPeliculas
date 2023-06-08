@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
-
+const userRoutes = require('./routes/usersRoutes');
+const loggMiddleware =require('./middlewares/auth')
 
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const methodOverride = require('method-override');
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3007;
 
 
 const mainRoutes = require('./routes/mainRoutes');
@@ -33,7 +34,7 @@ app.use(session({
     // cookie: { maxAge: 60000 } // 60 segundos
 }))
 app.use(methodOverride('_method'))
-
+app.use(loggMiddleware)
 app.use(mainRoutes);
 app.use(express.static(path.resolve(__dirname, '../public')));
 
@@ -44,6 +45,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', indexRouter);
 app.use(moviesRoutes);
 app.use(genresRoutes);
+app.use(userRoutes)
+app.use(express.json());
 
 app.listen(PORT, () => {
     console.log("Server running on http://localhost:" + PORT);

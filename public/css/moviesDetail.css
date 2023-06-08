@@ -1,54 +1,80 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
 }
 
-.titulo {
-    text-align: center;
-    margin-bottom: 20px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.movie-details {
-    margin-bottom: 20px;
+h1 {
+  color: #003366;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.movie-details .detail {
-    margin-bottom: 10px;
+p {
+  color: #555;
+  margin-bottom: 5px;
 }
 
-.movie-details .detail-label {
-    font-weight: bold;
+figure {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+img {
+  max-width: 100%;
 }
 
-.buttons-container a {
-    display: inline-block;
-    margin-right: 10px;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
+section {
+  margin-top: 20px;
 }
 
-.botonModificar {
-    background-color: blue;
-}
-
-.botonBorrar {
-    background-color: red;
-}
-
+.botonModificar,
+.botonBorrar,
 .botonVolver {
-    background-color: #00B7FF;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.botonModificar:hover,
+.botonBorrar:hover,
+.botonVolver:hover {
+  background-color: #002147;
+}
+
+.categorias {
+  border: 1px solid #003366;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+}
+
+.categorias h3 {
+  color: #003366;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.categorias ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.categorias li {
+  margin-bottom: 5px;
 }

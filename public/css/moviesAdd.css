@@ -1,65 +1,74 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  }
-  
-  .titulo {
-    text-align: center;
-  }
-  
-  .formulario {
-    margin: auto;
-    width: 50%;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  select {
-    height: 35px;
-  }
-  
-  button.botonAgregar,
-  a.botonVolver {
-    display: inline-block;
-    color: white;
-    background-color: green;
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  button.botonAgregar:hover,
-  a.botonVolver:hover {
-    background-color: darkgreen;
-  }
-  
-  .botonVolver {
-    background-color: #00B7FF;
-  }
-  
-  .botonVolver:hover {
-    background-color: #0084c7;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.titulo {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.formulario {
+  margin: auto;
+  width: 50%;
+  background-color: #fff;
+  border: 1px solid #003366;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #003366;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+select {
+  height: 35px;
+}
+
+button.botonAgregar,
+a.botonVolver {
+  display: inline-block;
+  color: #fff;
+  background-color: #003366;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+button.botonAgregar:hover,
+a.botonVolver:hover {
+  background-color: #002147;
+}
+
+.botonVolver {
+  background-color: #006699;
+}
+
+.botonVolver:hover {
+  background-color: #004d80;
+}
+

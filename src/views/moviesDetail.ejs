@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= movie.title %></title>
-    <link rel="stylesheet" href="/css/moviesDetail.css" />
+    <link rel='stylesheet' href='/public/css/moviesDetail.css' />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
 
+        figure {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        p {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        .botonModificar,
+        .botonBorrar,
+        .botonVolver {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .botonModificar:hover,
+        .botonBorrar:hover,
+        .botonVolver:hover {
+            background-color: #002147;
+        }
+    </style>
 </head>
-
 <body>
-    <h1 class="titulo"><%= movie.title %></h1>
+    <h1><%= movie.title %></h1>    
     <br>
-    <section class="movie-details">
-        <p class="detail"><span class="detail-label">RATING:</span> <%= movie.rating %></p>
-        <p class="detail"><span class="detail-label">AWARDS:</span> <%= movie.awards %></p>
-        <p class="detail"><span class="detail-label">LENGTH:</span> <%= movie.length + ' min' %></p>
-        <p class="detail"><span class="detail-label">RELEASE DATE:</span> <%= movie.release_date %></p>
-        
-    </section>
+    <p>RATING: <%= movie.rating %></p>
+    <p>AWARDS: <%= movie.awards %></p>
+    <p>LENGTH: <%= movie.length %> min</p>
+    <p>RELEASE DATE: <%= movie.release_date %></p>
+    <p>ACTORES</p>
+    <% movie.actors.forEach(actor => { %>
+        <%= actor.first_name %> <%= actor.last_name %>,
+    <% }); %>
+    
+    <p>GÉNERO: <%= movie.genre.name %></p> 
     <br>
-    <section class="buttons-container">
-        <a class="botonModificar" href="/movies/edit/<%= movie.id %>">Modificar</a>
-        <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
-        <a class="botonVolver" href="/movies">Listado de Películas</a>
-    </section>
+    <section>
+        <% if (locals.isAdmin) { %>
+            <a class="botonModificar" href="/movies/edit/<%= movie.id %>">Modificar</a>
+            <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
+            <a class="botonVolver" href="/movies">Volver</a>
+        <% } %>
+        <a class="botonVolver" href="/movies">Volver al listado</a>
 
+    </section>
 </body>
-
 </html>
-
 
