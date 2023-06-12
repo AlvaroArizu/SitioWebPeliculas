@@ -1,44 +1,45 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .buttons-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .botonBorrar,
-  .botonVolver {
-    color: white;
-    background-color: #ff0000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-  
-  .botonVolver {
-    background-color: #00b7ff;
-  }
-  
-  .botonBorrar:hover,
-  .botonVolver:hover {
-    background-color: #d60000;
-  }
-  
-  form {
-    text-align: center;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.botonBorrar,
+.botonVolver,
+.botonModificar {
+  color: white;
+  background-color: #ff0000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.botonVolver {
+  background-color: #00b7ff;
+}
+
+.botonBorrar:hover,
+.botonVolver:hover,
+.botonModificar:hover {
+  background-color: #d60000;
+}
+
+form {
+  text-align: center;
+}

@@ -48,7 +48,8 @@ select {
 }
 
 button.botonAgregar,
-a.botonVolver {
+a.botonVolver,
+a.botonModificar {
   display: inline-block;
   color: #fff;
   background-color: #003366;
@@ -60,7 +61,8 @@ a.botonVolver {
 }
 
 button.botonAgregar:hover,
-a.botonVolver:hover {
+a.botonVolver:hover,
+a.botonModificar:hover {
   background-color: #002147;
 }
 
@@ -71,4 +73,3 @@ a.botonVolver:hover {
 .botonVolver:hover {
   background-color: #004d80;
 }
-
