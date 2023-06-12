@@ -8,7 +8,7 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 
 
-const PORT = process.env.PORT || 3008;
+const PORT = process.env.PORT || 3007;
 
 
 const mainRoutes = require('./routes/mainRoutes');
